@@ -1,0 +1,18 @@
+monolog:
+    handlers:
+        main:
+            type: fingers_crossed
+            action_level: error
+            handler: nested
+        nested:
+            type: stream
+            path: "%kernel.logs_dir%/%kernel.environment%.log"
+            level: debug
+
+monolog:
+    channels: [adyen]
+    handlers: # Add alongside other handlers you might have
+        doctrine:
+            type: service
+            channels: [adyen]
+            id: bitbag.sylius_adyen_plugin.logging.monolog.doctrine_handler

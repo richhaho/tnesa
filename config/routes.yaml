@@ -1,0 +1,8 @@
+sylius_paypal_webhook:
+    resource: "@SyliusPayPalPlugin/Resources/config/webhook_routing.yaml"
+    
+bitbag_sylius_adyen_plugin:
+    resource: "@BitBagSyliusAdyenPlugin/Resources/config/routing.yaml"
+
+sylius_refund:
+    resource: "@SyliusRefundPlugin/Resources/config/routing.yml"
